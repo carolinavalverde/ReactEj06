@@ -11,23 +11,34 @@ const ColorForm = ({ addColor }) => {
     e.preventDefault();
     addColor(color);
     setColor("");
+    localStorage.setItem("colorTest", color);
   };
 
   return (
     <form
-      className="container-fluid bg-primary-subtle my-2 p-5"
+      className="container bg-primary-subtle my-2 p-3"
       onSubmit={handleSubmit}
     >
-      <label className="d-flex justify-content-center">
-        <input
-          className="mx-2"
-          type="text"
-          value={color}
-          onChange={handleColorChange}
-          placeholder="Ingrese un color"
-        />
-      </label>
-      <div className="d-flex justify-content-end">
+      <div className="container d-flex">
+        <div
+          className="container card col-lg-3 col-md-3 col-sm-1"
+          style={{
+            backgroundColor: `${color}`,
+            height: "160px",
+            width: "160px",
+          }}
+        ></div>
+        <label className="container col-lg-7 col-md-7 col-sm-5 ms-3">
+          <input
+            className="rounded p-2 form-control"
+            type="text"
+            value={color}
+            onChange={handleColorChange}
+            placeholder="Ingrese un color"
+          />
+        </label>
+      </div>
+      <div className="container d-flex justify-content-end">
         <button className="btn btn-primary my-2" type="submit">
           Guardar
         </button>
