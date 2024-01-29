@@ -8,12 +8,11 @@ const ColorForm = () => {
   };
 
   const handleSaveColor = () => {
-    // Guardar el color en localStorage
     localStorage.setItem("userColor", color);
   };
 
   return (
-    <div>
+    <div className="container my-3">
       <label>
         Ingrese un color:
         <input type="text" value={color} onChange={handleColorChange} />
