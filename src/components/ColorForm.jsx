@@ -12,12 +12,23 @@ const ColorForm = () => {
   };
 
   return (
-    <div className="container my-3">
-      <label>
-        Ingrese un color:
-        <input type="text" value={color} onChange={handleColorChange} />
-      </label>
-      <button onClick={handleSaveColor}>Guardar</button>
+    <div className="container mx-2">
+      <div className="container-fluid bg-primary-subtle p-5">
+        <label>
+          Ingrese un color:
+          <input
+            className="container m-2"
+            type="text"
+            value={color}
+            onChange={handleColorChange}
+          />
+        </label>
+      </div>
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-primary m-3" onClick={handleSaveColor}>
+          Guardar
+        </button>
+      </div>
     </div>
   );
 };
