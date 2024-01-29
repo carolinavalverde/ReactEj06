@@ -25,8 +25,8 @@ const App = () => {
   };
 
   return (
-    <section className="container-fluid mt-4">
-      <div className="bg-dark text-bg-dark text-center p-3 my-2">
+    <section className="container-fluid bg-dark-subtle">
+      <div className="bg-dark text-bg-dark text-center p-3 mb-2">
         <h1>Color Palette</h1>
       </div>
       <div className="container d-flex justify-content-center card card-body shadow">
