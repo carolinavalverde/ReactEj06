@@ -14,12 +14,24 @@ const ColorForm = ({ addColor }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Ingrese un color:
-        <input type="text" value={color} onChange={handleColorChange} />
+    <form
+      className="container-fluid bg-primary-subtle my-2 p-5"
+      onSubmit={handleSubmit}
+    >
+      <label className="d-flex justify-content-center">
+        <input
+          className="mx-2"
+          type="text"
+          value={color}
+          onChange={handleColorChange}
+          placeholder="Ingrese un color"
+        />
       </label>
-      <button type="submit">Guardar</button>
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-primary my-2" type="submit">
+          Guardar
+        </button>
+      </div>
     </form>
   );
 };

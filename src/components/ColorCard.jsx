@@ -7,7 +7,7 @@ const ColorCard = ({ color, deleteColor }) => {
         <div style={{ backgroundColor: color, height: "100px" }}></div>
         <p className="card-text">{color}</p>
         <button onClick={() => deleteColor(color)} className="btn btn-danger">
-          Eliminar
+          Borrar
         </button>
       </div>
     </div>
