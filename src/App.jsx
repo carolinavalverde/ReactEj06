@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/App.css";
-import ColorForm from './components/ColorForm.jsx';
+import ColorForm from './components/ColorForm';
+import ColorGrid from './components/ColorGrid';
 
 const App = () => {
+  const [colors, setColors] = useState([]);
+
+  useEffect(() => {
+    const savedColors = JSON.parse(localStorage.getItem('colors')) || [];
+    setColors(savedColors);
+  }, []);
+
+  const addColor = (color) => {
+    const updatedColors = [...colors, color];
+    setColors(updatedColors);
+    localStorage.setItem('colors', JSON.stringify(updatedColors));
+  };
+
+  const deleteColor = (colorToDelete) => {
+    const updatedColors = colors.filter((color) => color !== colorToDelete);
+    setColors(updatedColors);
+    localStorage.setItem('colors', JSON.stringify(updatedColors));
+  };
+
   return (
-    <section>
-      <h1 className='container-fluid text-bg-dark text-center p-2'>Color Palette</h1>
-      <div className='container m-3 card card-body shadow'> 
-        <span className='my-2'>Administrar colores</span>
-        <ColorForm />
-      </div>
-    </section>
+    <div className="container-fluid mt-4">
+      <h1>Color Palette</h1>
+      <ColorForm addColor={addColor} />
+      <hr />
+      {colors.length > 0 ? (
+        <ColorGrid colors={colors} deleteColor={deleteColor} />
+      ) : (
+        <p>No hay colores guardados.</p>
+      )}
+    </div>
   );
 };
 
 export default App;
+
