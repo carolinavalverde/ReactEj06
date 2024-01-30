@@ -34,7 +34,7 @@ const ColorForm = ({ addColor }) => {
             type="text"
             value={color}
             onChange={handleColorChange}
-            placeholder="Ingrese un color"
+            placeholder="Ingrese un color en inglés o hexa"
           />
         </label>
       </div>
