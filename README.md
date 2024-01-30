@@ -13,7 +13,7 @@ Diseño Responsivo: La aplicación está diseñada con Bootstrap, lo que garanti
 ## 3. Despliegue
 
 La aplicación ColorPalette está desplegada y disponible en: 
-https://colorpalette.netlify.app/
+https://colorpalette-06.netlify.app/
 
 ## 4. Tecnologías Utilizadas
 React: Desarrollo de la interfaz de usuario modular y reactiva.
@@ -23,8 +23,8 @@ Bootstrap v5.3.2: Utilización de componentes y estilos predefinidos para un dis
 JavaScript: Programación del comportamiento dinámico de la aplicación.
 
 ## 5. Instalación y Uso
-Clona el repositorio: git clone https://github.com/tu-usuario/color-palette-app.git
-Navega al directorio del proyecto: cd color-palette-app
+Clona el repositorio: git clone https://github.com/tu-usuario/ReactEj06.git
+Navega al directorio del proyecto: cd ReactEj06
 Instala las dependencias: npm install
 Inicia la aplicación: npm start
 La aplicación estará disponible en http://localhost:3000 en tu navegador.
